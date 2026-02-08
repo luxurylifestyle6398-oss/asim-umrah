@@ -19,4 +19,118 @@ h1,h2,h3{font-family:"Playfair Display";color:var(--gold)}
 p{color:#ccc}
 
 .hero{
-background:url("https://images.unsplash.com/photo-1544986581-efac024faf62?auto=format&fit=crop
+background:url("https://images.unsplash.com/photo-1544986581-efac024faf62?auto=format&fit=crop&w=1600") center/cover;
+min-height:100vh;display:flex;align-items:center;text-align:center
+}
+.overlay{background:rgba(0,0,0,.75);width:100%;padding:100px 20px}
+
+.btn{
+background:var(--gold);color:#000;padding:14px 35px;border-radius:40px;
+text-decoration:none;font-weight:600;display:inline-block;margin-top:25px
+}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px}
+
+.card{
+border:1px solid var(--gold);
+border-radius:18px;padding:35px;background:#050505;text-align:center
+}
+
+.img{width:100%;border-radius:15px;margin-bottom:15px}
+
+.whatsapp{
+position:fixed;right:20px;bottom:20px;background:#25d366;
+padding:14px 22px;border-radius:50px;color:#fff;text-decoration:none;font-weight:600
+}
+
+footer{background:#111;padding:40px;text-align:center}
+
+@media(max-width:600px){h1{font-size:30px}}
+</style>
+</head>
+
+<body>
+
+<a class="whatsapp" href="https://wa.me/919639889913">WhatsApp</a>
+
+<section class="hero">
+<div class="overlay container">
+<h1>Luxury Umrah Experience</h1>
+<p>Allah ke ghar ka safar — sukoon, comfort aur poori rehnumai ke saath 🤲</p>
+<a href="#packages" class="btn">View Packages</a>
+</div>
+</section>
+
+<section>
+<div class="container">
+<h2>About Asim Haj Umrah</h2>
+<p>
+Hum Indian Muslim families ke liye premium Umrah services provide karte hain.
+Hamari zimmedari sirf travel nahi — balki aapki ibadat ka sukoon hoti hai.
+</p>
+</div>
+</section>
+
+<section id="packages">
+<div class="container">
+<h2>Our Umrah Packages</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Economy Umrah</h3>
+<p>15 Days</p>
+<p>Basic Hotel + Guidance</p>
+<p>₹75,000*</p>
+</div>
+
+<div class="card">
+<h3>Standard Umrah</h3>
+<p>21 Days</p>
+<p>Makkah + Madinah</p>
+<p>₹85,000*</p>
+</div>
+
+<div class="card">
+<h3>Luxury Umrah</h3>
+<p>21 Days Premium</p>
+<p>Near Haram Hotels</p>
+<p>Custom Pricing</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section>
+<div class="container">
+<h2>Makkah & Madinah Ziyarat</h2>
+
+<div class="grid">
+<img class="img" src="https://images.unsplash.com/photo-1580414057403-c5f451f30e1c">
+<img class="img" src="https://images.unsplash.com/photo-1591608516485-7c0cdd9a03c6">
+<img class="img" src="https://images.unsplash.com/photo-1564769662533-4f00a87b4056">
+</div>
+
+</div>
+</section>
+
+<section>
+<div class="container card">
+<h2>Contact Us</h2>
+<p>
+📞 Mohd Zeeshan – 9639889913<br>
+📞 Haji Asim – 7351107383<br><br>
+📍 Adrees, Main Bazar, Kasba Kithore
+</p>
+<a class="btn" href="https://wa.me/919639889913">DM on WhatsApp</a>
+</div>
+</section>
+
+<footer>
+<p>🤲 Allah hume aur aapko apne ghar ki hazri naseeb farmaye. Aameen.</p>
+<p>© Asim Haj Umrah Tour Travel</p>
+</footer>
+
+</body>
+  </html>
