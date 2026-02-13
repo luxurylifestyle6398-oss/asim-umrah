@@ -1,166 +1,95 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width">
-<title>Asim Haj Umrah Tour</title>
+import { motion } from "framer-motion"; import { Card, CardContent } from "@/components/ui/card"; import { Button } from "@/components/ui/button"; import { Phone, Mail, MapPin, Star } from "lucide-react";
 
-<style>
-body{margin:0;background:#000;color:#fff;font-family:Arial}
-section{padding:60px 20px}
-.gold{color:#d4af37}
-.hero{background-image:url('https://images.unsplash.com/photo-1589182373726-e4f658ab50f0');
-background-position:center;
-min-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-text-align:center;
-}
-.overlay{background:rgba(0,0,0,.75);padding:50px;width:100%}
+export default function AsimHajUmrahWebsite() { return ( <div className="bg-ivory text-gray-800 font-serif"> {/* Hero Section */} <section className="relative h-screen bg-cover bg-center" style={{ backgroundImage: "url('https://images.unsplash.com/photo-1589391886645-d51941baf7fb')" }} > <div className="absolute inset-0 bg-emerald-900/70" /> <div className="relative z-10 flex flex-col items-center justify-center h-full text-center px-6"> <h1 className="text-4xl md:text-6xl font-bold text-gold mb-4"> Luxury Umrah & Hajj Experiences – Trusted Islamic Travel Partner </h1> <p className="max-w-2xl text-lg text-ivory mb-6"> Providing complete Umrah services with honesty, comfort and spiritual guidance. </p> <div className="flex gap-4"> <Button className="bg-gold text-emerald-900 rounded-full px-8 py-6 text-lg shadow-lg"> WhatsApp Booking </Button> <Button variant="outline" className="rounded-full px-8 py-6 text-lg text-ivory border-ivory"> View Packages </Button> </div> </div> </section>
 
-.card{
-background:#111;
-border-radius:18px;
-padding:25px;
-margin:25px 0;
-box-shadow:0 0 15px rgba(212,175,55,.2)
-}
+{/* Why Choose Us */}
+  <section className="py-20 px-6 max-w-7xl mx-auto">
+    <h2 className="text-3xl font-bold text-center mb-12">Why Choose Us</h2>
+    <div className="grid md:grid-cols-3 gap-8">
+      {[
+        "Government Approved Travel Agency",
+        "10+ Years Experience",
+        "Trusted Local Agency",
+        "24x7 On Ground Support",
+        "Islamic Scholars Guidance",
+        "Transparent Pricing",
+      ].map((item, i) => (
+        <Card key={i} className="rounded-2xl shadow-xl">
+          <CardContent className="p-6 text-center">{item}</CardContent>
+        </Card>
+      ))}
+    </div>
+  </section>
 
-.card img{
-width:100%;
-border-radius:12px;
-margin-bottom:15px
-}
+  {/* Packages */}
+  <section className="py-20 bg-emerald-50 px-6">
+    <h2 className="text-3xl font-bold text-center mb-12">Our Premium Packages</h2>
+    <div className="grid md:grid-cols-3 gap-10 max-w-7xl mx-auto">
+      {[{ name: "Economy Umrah", price: "₹85,000 – 21 Days" }, { name: "Standard Umrah", price: "₹1,25,000 – 14 Days" }, { name: "VIP Umrah", price: "₹1,85,000 – 10 Days" }].map((pkg, i) => (
+        <motion.div whileHover={{ y: -10 }} key={i}>
+          <Card className="rounded-2xl shadow-2xl">
+            <CardContent className="p-8">
+              <h3 className="text-xl font-bold mb-2">{pkg.name}</h3>
+              <p className="text-gold font-semibold mb-4">{pkg.price}</p>
+              <ul className="space-y-2">
+                <li>✔ Flights</li>
+                <li>✔ Haram Nearby Hotels</li>
+                <li>✔ Indian Meals</li>
+                <li>✔ Ziyarat</li>
+                <li>✔ Visa Processing</li>
+                <li>✔ Dedicated Guide</li>
+              </ul>
+            </CardContent>
+          </Card>
+        </motion.div>
+      ))}
+    </div>
+  </section>
 
-.price{color:#d4af37;font-size:26px;font-weight:bold}
+  {/* Services */}
+  <section className="py-20 px-6 max-w-7xl mx-auto">
+    <h2 className="text-3xl font-bold text-center mb-12">Our Services</h2>
+    <div className="grid md:grid-cols-3 gap-8">
+      {["Flight Booking", "Hotel Near Haram", "Umrah Visa", "Transport", "Ziyarat Tours", "Group & Family Packages"].map((srv, i) => (
+        <Card key={i} className="backdrop-blur-lg bg-white/60 rounded-2xl shadow-xl">
+          <CardContent className="p-6 text-center">{srv}</CardContent>
+        </Card>
+      ))}
+    </div>
+  </section>
 
-.btn{
-background:#d4af37;
-color:black;
-padding:14px 30px;
-border-radius:40px;
-text-decoration:none;
-display:inline-block;
-margin-top:15px;
-font-weight:bold
-}
+  {/* Testimonials */}
+  <section className="py-20 bg-emerald-900 text-ivory px-6">
+    <h2 className="text-3xl font-bold text-center mb-12">What Our Pilgrims Say</h2>
+    <div className="flex justify-center gap-4">
+      {[1, 2, 3].map((i) => (
+        <Card key={i} className="rounded-2xl max-w-sm">
+          <CardContent className="p-6 text-center">
+            <div className="flex justify-center mb-2">{[...Array(5)].map((_, j) => <Star key={j} className="text-gold" />)}</div>
+            <p>Excellent service, very professional and spiritual experience.</p>
+          </CardContent>
+        </Card>
+      ))}
+    </div>
+  </section>
 
-.whatsapp{
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25d366;
-color:white;
-padding:15px;
-border-radius:50%;
-font-size:22px;
-text-decoration:none
-}
+  {/* Contact */}
+  <section className="py-20 px-6 max-w-7xl mx-auto">
+    <h2 className="text-3xl font-bold text-center mb-12">Contact Us</h2>
+    <div className="grid md:grid-cols-2 gap-8">
+      <div className="space-y-4">
+        <p className="flex items-center gap-2"><Phone /> +91-XXXXXXXXXX</p>
+        <p className="flex items-center gap-2"><Mail /> info@asimhajumrah.com</p>
+        <p className="flex items-center gap-2"><MapPin /> Office Address, India</p>
+      </div>
+      <iframe className="w-full h-64 rounded-2xl" src="https://www.google.com/maps" />
+    </div>
+  </section>
 
-ul{padding-left:18px}
-li{margin-bottom:6px}
-
-</style>
-</head>
-
-<body>
-
-<div class="hero">
-<div class="overlay">
-<h1 class="gold">ASIM HAJ UMRAH TOUR</h1>
-<p>Allah ke ghar ka luxury safar – bharose ke saath</p>
-<a class="btn" href="https://wa.me/919639889913">WhatsApp Booking</a>
-</div>
-</div>
-
-<section>
-
-<h2 class="gold">🌙 Our Luxury Umrah Packages</h2>
-
-<div class="card">
-<img src="https://images.pexels.com/photos/2087391/pexels-photo-2087391.jpeg">
-<h3>Economy Umrah – 21 Days</h3>
-<p class="price">₹85,000</p>
-
-<ul>
-<li>3 Star Hotel Makkah + Madina</li>
-<li>Return Flight Ticket</li>
-<li>Visa + Insurance</li>
-<li>Daily Ziyarat</li>
-<li>Group Islamic Guide</li>
-<li>Airport Pickup & Drop</li>
-</ul>
-</div>
-
-<div class="card">
-<img src="https://images.pexels.com/photos/7245729/pexels-photo-7245729.jpeg">
-<h3>Ramzan Umrah Special – 21 Days</h3>
-<p class="price">₹1,01,000</p>
-
-<ul>
-<li>3 Star Hotel near Haram</li>
-<li>Ramzan Sehri & Iftar</li>
-<li>Return Air Ticket</li>
-<li>Visa + Medical Insurance</li>
-<li>Ziyarat Makkah & Madina</li>
-<li>24×7 Tour Support</li>
-</ul>
+  {/* Footer */}
+  <footer className="bg-emerald-900 text-ivory py-8 text-center">
+    <p>© 2026 Asim Haj & Umrah Tour. All Rights Reserved.</p>
+  </footer>
 </div>
 
-<div class="card">
-<img src="https://images.pexels.com/photos/7245727/pexels-photo-7245727.jpeg">
-<h3>Premium Umrah – Luxury Package</h3>
-<p class="price">₹1,35,000</p>
-
-<ul>
-<li>Best 3 Star Hotel Close to Haram</li>
-<li>Comfort Room Stay</li>
-<li>Direct Flights</li>
-<li>VIP Ziyarat Service</li>
-<li>Personal Islamic Guide</li>
-<li>Full Family Care</li>
-</ul>
-</div>
-
-</section>
-
-<section>
-
-<h2 class="gold">✨ Why Choose Asim Haj Umrah?</h2>
-
-<ul>
-<li>✔ Experienced Islamic Team</li>
-<li>✔ Honest Pricing – No Hidden Charges</li>
-<li>✔ Family Friendly Service</li>
-<li>✔ 500+ Happy Pilgrims</li>
-<li>✔ 24×7 WhatsApp Support</li>
-</ul>
-
-</section>
-
-<section>
-
-<h2 class="gold">📞 Contact Us</h2>
-
-<p>
-Mohd Zeeshan – 9639889913<br>
-Haji Asim – 7351107383<br>
-Address: Main Bazar, Kasba Kithore
-</p>
-
-<a class="btn" href="https://wa.me/919639889913">DM on WhatsApp</a>
-
-</section>
-
-<footer style="text-align:center;padding:40px">
-<p>🤲 Allah hum sab ko apne ghar bulaye</p>
-<p>© Asim Haj Umrah Tour</p>
-</footer>
-
-<a class="whatsapp" href="https://wa.me
-  /919639889913">💬</a>
-
-</body>
-</html>
-
+); }
